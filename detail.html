@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="doc-title">Vivella — parfém na praní</title>
+<meta name="description" content="Parfém na praní Vivella, 250 ml za 349 Kč. Jedno praní za 6,98 Kč. Kompletní čichová pyramida i seznam vonných alergenů.">
+<link rel="canonical" id="canon" href="https://vivella.cz/vune">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vivella">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Vivella — parfém na praní">
+<meta property="og:description" content="Parfém na praní Vivella, 250 ml za 349 Kč. Jedno praní za 6,98 Kč. Kompletní čichová pyramida i seznam vonných alergenů.">
+<meta property="og:url" content="https://vivella.cz/vune">
+<meta property="og:image" content="https://vivella.cz/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vivella — parfém na praní">
+<meta name="twitter:description" content="Parfém na praní Vivella, 250 ml za 349 Kč. Jedno praní za 6,98 Kč. Kompletní čichová pyramida i seznam vonných alergenů.">
+<meta name="twitter:image" content="https://vivella.cz/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#b89a5a; --gold-light:#d4b97a; --gold-pale:#f0e8d5; --gold-deep:#877033;
+  --black:#232327; --dark:#2B2B2E; --dark-mid:#35353A; --charcoal:#3d3d42;
+  --warm-grey:#6f6a66; --cream:#faf8f4; --cream-2:#f2ede3; --line:#e5ddcd; --white:#fff;
+  --violet:#7B4FA8; --navy:#2E3D80; --sky:#3E9BCB; --rose:#D4899A; --onyx:#2B2B2E;
+  --ok:#2F7D5B;
+  /* čitelné varianty pro světlá pozadí (kontrast WCAG AA) */
+  --gold-text:#7d6530; --grey-text:#6f6a66; --grey-on-dark:#a49d97;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Jost',system-ui,sans-serif;
+  --font-script:'Parisienne',cursive;
+  --transition:.4s cubic-bezier(.25,.46,.45,.94);
+  --transition-slow:.8s cubic-bezier(.25,.46,.45,.94);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--dark);background:var(--cream);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+.container{max-width:1240px;margin:0 auto;padding:0 28px}
+.container-sm{max-width:840px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+.display-md{font-size:clamp(2.1rem,4.2vw,3.4rem)}
+/* ručně psané nadnadpisy */
+.overline{font-family:var(--font-script);font-size:clamp(2.1rem,3vw,3rem);letter-spacing:0;text-transform:none;
+  color:var(--gold-text);font-weight:400;margin-bottom:.5rem;display:block;line-height:1.1}
+.text-center .overline,.section-header.text-center .overline{text-align:center}
+.math-section .overline,.story-section .overline,.refs-section .overline{color:var(--gold-light)}
+.body-lg{font-size:1.05rem;color:var(--warm-grey);max-width:62ch}
+section{padding:92px 0}
+/* dvě sousedící sekce dřív vytvářely 220px mezeru (110 zdola + 110 shora) */
+.finder-section{padding:92px 0 74px}
+#produkty{padding-top:74px}
+a{color:inherit;text-decoration:none}
+.text-center{text-align:center}
+.text-center .body-lg{margin-left:auto;margin-right:auto}
+.section-header{margin-bottom:64px}
+.divider-line{width:52px;height:1px;background:var(--gold);margin:22px 0}
+.text-center .divider-line{margin:22px auto}
+.hide{display:none!important}
+
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.delay-1{transition-delay:.1s!important}.delay-2{transition-delay:.2s!important}.delay-3{transition-delay:.3s!important}
+@media(prefers-reduced-motion:reduce){.reveal,.reveal-left,.reveal-right{opacity:1;transform:none;transition:none}}
+
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1.05rem 2.4rem;font-family:var(--font-body);
+  font-size:.82rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;
+  transition:all var(--transition);position:relative;overflow:hidden;border:1px solid transparent;background:none}
+.btn::before{content:'';position:absolute;inset:0;transform:translateX(-101%);transition:transform var(--transition)}
+.btn span{position:relative;z-index:1}
+.btn:hover::before{transform:translateX(0)}
+.btn-gold{background:var(--gold-deep);color:var(--white)}
+.btn-gold::before{background:var(--gold-text)}
+.btn-gold:hover{color:var(--black)}
+.btn-outline{border-color:var(--dark);color:var(--dark)}
+.btn-outline::before{background:var(--dark)}
+.btn-outline:hover{color:var(--cream)}
+.btn-outline-light{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-outline-light::before{background:rgba(255,255,255,.14)}
+.btn-arrow{transition:transform var(--transition)}
+.btn:hover .btn-arrow{transform:translateX(4px)}
+
+/* TOP BAR — varianta C: splývá s navigací, zlatá zůstává akcentem pro CTA */
+.topbar{background:var(--cream);color:var(--grey-text);font-size:.72rem;text-align:center;
+  padding:11px 24px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;
+  border-bottom:1px solid rgba(184,154,90,.22)}
+.topbar b{color:var(--gold-deep);font-weight:500}
+.topbar .sep{color:rgba(184,154,90,.5);margin:0 .85rem}
+@media(max-width:700px){.topbar{font-size:.58rem;letter-spacing:.14em;padding:9px 16px}
+  .topbar .sep,.topbar .opt-hide{display:none}}
+
+#nav{position:sticky;top:0;z-index:60;transition:all var(--transition);border-bottom:1px solid transparent}
+#nav.scrolled{background:rgba(250,248,244,.92);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.nav-logo{display:flex;align-items:center;transition:opacity var(--transition)}
+.nav-logo:hover{opacity:.62}
+.nav-logo img{height:30px;width:auto;display:block}
+@media(max-width:600px){.nav-logo img{height:24px}}
+.nav-links{display:flex;gap:36px;list-style:none;font-size:.82rem;letter-spacing:.04em;font-weight:400}
+.nav-links a{color:var(--charcoal);position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width var(--transition)}
+.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-cart{position:relative;cursor:pointer;background:none;border:none;padding:6px;color:var(--charcoal);
+  display:flex;align-items:center;transition:color var(--transition)}
+.nav-cart:hover{color:var(--gold)}
+.nav-cart svg,.nav-hamburger svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cart-badge{position:absolute;top:-2px;right:-4px;background:var(--gold-deep);color:#fff;font-size:.64rem;font-weight:600;
+  width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--charcoal);padding:6px}
+@media(max-width:1080px){.nav-links{display:none}.nav-hamburger{display:block}}
+.mobile-menu{position:fixed;inset:0;background:var(--dark);z-index:90;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:26px;transform:translateY(-100%);transition:transform var(--transition)}
+.mobile-menu.open{transform:translateY(0)}
+.mobile-logo{height:30px;width:auto;margin-bottom:18px}
+.mobile-link{color:#fff;font-family:var(--font-display);font-size:2rem}
+.mobile-close{position:absolute;top:26px;right:28px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer}
+
+.hero{position:relative;height:calc(100vh - 118px);min-height:620px;max-height:880px;
+  display:flex;align-items:center;overflow:hidden;padding:0}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 0s linear 1.2s}
+.hero-slide.active{opacity:1;visibility:visible;transition:opacity 1.2s ease,visibility 0s}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:kenburns 20s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.11)}}
+.hero-overlay{position:absolute;inset:0;
+  background:linear-gradient(95deg,rgba(30,30,33,.94) 0%,rgba(30,30,33,.86) 30%,rgba(30,30,33,.55) 55%,rgba(30,30,33,.2) 80%,rgba(30,30,33,.08) 100%),
+             linear-gradient(180deg,rgba(30,30,33,.35) 0%,rgba(30,30,33,0) 30%)}
+.hero-slide .container{position:relative;z-index:3;width:100%}
+.hero-content{color:#fff;max-width:620px;min-height:430px;display:flex;flex-direction:column;justify-content:flex-start}
+/* min-height drží nadpis na všech slidech ve stejné výšce — jinak text mezi snímky poskakuje */
+.hero-badge{display:inline-flex;align-items:center;gap:14px;font-size:.66rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold-light);margin-bottom:24px;font-weight:400}
+.hero-badge::before{content:'';width:30px;height:1px;background:var(--gold);flex-shrink:0}
+.hero-badge.promo{background:var(--gold-deep);color:#fff;font-weight:600;padding:7px 15px;gap:0;letter-spacing:.18em}
+.hero-badge.promo::before{display:none}
+.hero-title{font-size:clamp(2.4rem,3.6vw,3.9rem);margin-bottom:18px;line-height:1.1}
+.hero-title em{font-style:normal;color:var(--gold-light)}
+.hero-subtitle{font-size:1.02rem;color:rgba(255,255,255,.78);margin-bottom:26px;max-width:50ch;font-weight:300;line-height:1.65}
+.price-hook{display:inline-flex;align-items:center;gap:16px;border-left:2px solid var(--gold);padding:10px 0 10px 20px;margin-bottom:30px}
+.price-hook .big{font-family:var(--font-display);font-size:2.6rem;color:var(--gold-light);line-height:1;white-space:nowrap}
+.price-hook .txt{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.5}
+.price-hook .txt s{color:rgba(255,255,255,.42)}
+.hero-trust{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:30px;padding:12px 0 12px 20px;border-left:2px solid var(--gold)}
+.hero-trust span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);
+  display:inline-flex;align-items:center;gap:8px}
+.hero-trust span::before{content:'';width:4px;height:4px;background:var(--gold-light);border-radius:50%}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.promo-tag{display:inline-flex;align-items:baseline;gap:14px;margin-bottom:28px}
+.promo-tag .off{font-family:var(--font-display);font-size:3.4rem;color:var(--gold-light);line-height:1}
+.promo-tag .col{display:flex;flex-direction:column;gap:2px}
+.promo-tag .now{font-size:1.5rem;font-weight:500;color:#fff;line-height:1.2}
+.promo-tag .was{font-size:.85rem;color:rgba(255,255,255,.45);text-decoration:line-through}
+.promo-note{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:22px}
+
+.hero-indicators{position:absolute;bottom:38px;right:28px;z-index:5;display:flex;gap:9px}
+.hero-dot{width:30px;height:2px;background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;transition:background var(--transition)}
+.hero-dot.active{background:var(--gold-light)}
+.hero-scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:5}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,transparent,var(--gold-light));animation:scrollPulse 2.2s ease-in-out infinite;display:block}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+@media(max-width:1100px){.hero-overlay{background:linear-gradient(95deg,rgba(30,30,33,.95) 0%,rgba(30,30,33,.8) 55%,rgba(30,30,33,.5) 100%)}}
+@media(max-width:860px){.hero{height:auto;min-height:0;max-height:none;padding:80px 0 90px}
+  .hero-slide{position:absolute}.hero-slide.active{position:relative}
+  .hero-content{min-height:0}
+  .hero-scroll{display:none}.hero-indicators{bottom:26px;left:28px;right:auto}
+  .hero-title{font-size:clamp(2.1rem,7vw,2.9rem)}}
+
+.stats-bar{background:var(--white);border-top:3px solid var(--gold);border-bottom:1px solid var(--line);padding:0;
+  box-shadow:0 18px 40px -34px rgba(10,10,10,.35)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:48px 22px;text-align:center}
+.stat-item + .stat-item{border-left:1px solid var(--line)}
+.stat-number{font-family:var(--font-display);font-size:clamp(2.8rem,3.6vw,3.6rem);color:var(--gold-text);line-height:1.05}
+.stat-label{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-text);margin-top:12px;font-weight:400}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+.finder-section{background:linear-gradient(180deg,var(--cream-2),var(--cream));position:relative;overflow:hidden}
+/* mřížka znaků z loga na pozadí — naskakuje po vjetí sekce do viewportu (bez barev, jen šedá) */
+.mark-field{position:absolute;inset:0;z-index:0;display:grid;align-content:center;justify-content:center;pointer-events:none}
+.mark-cell{display:flex;align-items:center;justify-content:center}
+.mark-cell svg{width:52px;height:52px;color:var(--mc,#ddd8cf);opacity:0;transform:scale(.64);
+  transition:opacity .6s cubic-bezier(.2,.9,.3,1.15),transform .6s cubic-bezier(.2,.9,.3,1.15)}
+.mark-cell.in svg{opacity:1;transform:scale(1)}
+.finder-section .container{position:relative;z-index:2}
+@media(prefers-reduced-motion:reduce){.mark-cell svg{transition:none}}
+@media(max-width:700px){.mark-cell svg{width:38px;height:38px}}
+.finder-box{background:var(--white);border:1px solid var(--line);padding:52px;max-width:780px;margin:0 auto;box-shadow:0 34px 70px -46px rgba(10,10,10,.42)}
+.q-head{text-align:center;margin-bottom:32px}
+.q-head h3{font-size:2.3rem;margin-bottom:10px}
+.q-head p{color:var(--grey-text);font-size:1rem}
+.steps{display:flex;gap:6px;justify-content:center;margin-bottom:36px}
+.dot{width:36px;height:2px;background:var(--line);transition:background var(--transition)}
+.dot.on{background:var(--gold)}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.opt{border:1px solid var(--line);background:var(--cream);padding:26px 28px;cursor:pointer;text-align:left;font-family:inherit;transition:all var(--transition)}
+.opt:hover{border-color:var(--gold);background:var(--white);transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(10,10,10,.3)}
+.opt .t{display:block;font-weight:500;font-size:1.18rem;margin-bottom:8px;color:var(--dark);line-height:1.35}
+.opt .d{display:block;font-size:1rem;color:var(--grey-text);line-height:1.6;font-weight:300}
+/* --- barva vůně jako odměna ve výsledku kvízu --- */
+.result{position:relative;padding:8px 0 4px}
+.result::before{content:'';position:absolute;left:50%;top:-52px;transform:translateX(-50%);width:min(560px,100%);height:320px;
+  background:radial-gradient(ellipse at center,var(--pc-soft,transparent) 0%,transparent 66%);pointer-events:none;z-index:0}
+.result > *{position:relative;z-index:1}
+.result .rname{font-family:var(--font-display);font-size:2.6rem;color:var(--pc-strong,var(--dark))}
+.result .rfam{color:var(--pc-strong,var(--gold-text))}
+.result .rline{width:52px;height:2px;background:var(--pc,var(--gold));margin:12px auto 16px}
+.result .rimg{width:150px;margin:0 auto 14px}
+.result .btn-gold{background:var(--pc-strong,var(--gold-deep))}
+.result .btn-gold::before{background:var(--pc,var(--gold-deep))}
+
+/* --- barevný proužek u položek v košíku --- */
+.cart-item{position:relative;padding-left:14px}
+.cart-item::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:3px;background:var(--pc,var(--line))}
+
+/* --- výběr textu ve zlaté --- */
+::selection{background:var(--gold-pale);color:var(--dark)}
+::-moz-selection{background:var(--gold-pale);color:var(--dark)}
+.result .rimg{width:150px;margin:0 auto 14px}
+.result .rimg img{width:100%}
+.result .rname{font-family:var(--font-display);font-size:2.3rem}
+.result .rfam{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.result .rwhy{color:var(--grey-text);font-size:1rem;max-width:46ch;margin:0 auto 26px;line-height:1.75}
+.restart{background:none;border:none;color:var(--grey-text);font-size:.82rem;text-decoration:underline;cursor:pointer;margin-top:22px;font-family:inherit}
+@media(max-width:640px){.opts{grid-template-columns:1fr}.finder-box{padding:30px 22px}}
+
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.product-card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;transition:all var(--transition);position:relative}
+.product-card:hover{box-shadow:0 34px 60px -40px rgba(10,10,10,.45);transform:translateY(-6px);border-color:var(--gold-pale)}
+.product-img-wrap{position:relative;background:var(--white);padding:22px;display:flex;justify-content:center;align-items:center;min-height:310px;overflow:hidden}
+.product-img-wrap img{max-height:280px;width:auto;transition:transform var(--transition-slow)}
+.product-card:hover .product-img-wrap img{transform:scale(1.05) translateY(-5px)}
+.swatch{position:absolute;top:18px;left:18px;width:10px;height:10px;border-radius:50%;z-index:2}
+.product-badge{position:absolute;top:16px;right:16px;z-index:2;background:var(--dark);color:var(--gold-light);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 11px;font-weight:500}
+.product-info{padding:26px;flex:1;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.product-name{font-size:1.6rem;margin-bottom:3px}
+.product-fam{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:500;margin-bottom:18px}
+.pyr{border-top:1px solid var(--line);padding-top:16px;margin-bottom:18px;flex:1}
+.pyr-r{display:grid;grid-template-columns:60px 1fr;gap:12px;padding:6px 0;font-size:.9rem}
+.pyr-r .k{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;padding-top:4px}
+.pyr-r .v{color:var(--grey-text);line-height:1.5;font-weight:300}
+.product-price-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:18px}
+.product-price{font-family:var(--font-display);font-size:1.6rem;line-height:1.2}
+.product-price small{display:block;font-family:var(--font-body);font-size:.74rem;color:var(--grey-text);letter-spacing:.02em}
+.product-add-btn{background:var(--dark);color:var(--cream);border:none;padding:12px 20px;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:background var(--transition)}
+.product-add-btn:hover{background:var(--gold-deep)}
+@media(max-width:980px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.products-grid{grid-template-columns:1fr}}
+
+.bundles{background:var(--cream-2)}
+.b-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:52px}
+.bundle{background:var(--white);border:1px solid var(--line);padding:40px;position:relative}
+.bundle.feat{border-color:var(--gold)}
+.bribbon{position:absolute;top:-11px;left:40px;background:var(--gold-deep);color:#fff;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 13px;font-weight:600}
+.bundle h3{font-size:1.75rem;margin-bottom:8px}
+.bundle p{font-size:1rem;color:var(--warm-grey);margin-bottom:22px;font-weight:300}
+.bundle p b{color:var(--dark);font-weight:500}
+.bp{display:flex;align-items:baseline;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.bp .now{font-family:var(--font-display);font-size:2.4rem}
+.bp .was{color:var(--warm-grey);text-decoration:line-through;font-size:.95rem}
+.bp .save{background:#eef5f1;color:var(--ok);font-size:.66rem;font-weight:600;padding:4px 10px;letter-spacing:.06em}
+@media(max-width:800px){.b-grid{grid-template-columns:1fr}}
+
+
+
+
+/* --- zlatý scroll progress --- */
+#scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-light));transition:width .1s linear}
+
+/* ---- jemné barevné akcenty produktů (--pc = barva vůně) ---- */
+.product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--pc,var(--gold));
+  transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.25,.46,.45,.94);z-index:2}
+.product-card:hover::before{transform:scaleX(1)}
+.product-card:hover{border-color:var(--pc-line,var(--gold-pale));box-shadow:0 34px 60px -40px var(--pc-shadow,rgba(10,10,10,.45))}
+/* Barva se drží MIMO plochu obrázku — produktová PNG mají bílé (neprůhledné) pozadí,
+   takže jakýkoli přeliv za lahví by udělal viditelný bílý obdélník.
+   Až dorazí PNG s alfa kanálem, jde přidat i aura za lahev. */
+.product-card:hover .product-info{background:linear-gradient(180deg,var(--pc-soft,transparent),transparent 55%)}
+.product-info{transition:background var(--transition)}
+.product-card::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--pc,var(--gold));
+  transform:scaleX(0);transform-origin:right;transition:transform .55s cubic-bezier(.25,.46,.45,.94)}
+.product-card:hover::after{transform:scaleX(1)}
+.product-card:hover .product-fam{color:var(--pc-strong,var(--gold-text))}
+.product-fam{transition:color var(--transition)}
+.product-card:hover .swatch{box-shadow:0 0 0 4px var(--pc-soft,transparent)}
+.swatch{transition:box-shadow var(--transition)}
+
+.ing-card{position:relative;--pc:var(--gold);--pc-soft:rgba(184,154,90,.08)}
+.ing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--pc);z-index:2}
+.ing-head{background:linear-gradient(90deg,var(--pc-soft),transparent 60%);transition:background var(--transition)}
+.ing-head .t{display:inline-flex;align-items:center;gap:11px}
+.ing-head .t::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--pc);flex-shrink:0;
+  box-shadow:0 0 0 4px var(--pc-soft)}
+.ing-tab.on{background:var(--pc);border-color:var(--pc);color:#fff}
+.ing-tab:hover:not(.on){border-color:var(--pc);color:var(--dark)}
+.ing-row:hover .v{color:var(--dark)}
+
+/* ---- hvězdičky + souhrn hodnocení ---- */
+.refs-summary{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:34px;flex-wrap:wrap}
+.refs-summary .score{font-family:var(--font-display);font-size:2.6rem;color:var(--gold-light);line-height:1}
+.refs-summary .sm-txt{font-size:.84rem;color:rgba(255,255,255,.68);letter-spacing:.04em}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:15px;height:15px;display:block}
+.stars .s-full{fill:var(--gold-light)}
+.stars .s-empty{fill:rgba(255,255,255,.16)}
+.stars .s-half stop:first-child{stop-color:var(--gold-light)}
+.ref-card .stars svg{width:14px;height:14px}
+.ref-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ---- Instagram pruh ---- */
+.ig-section{background:var(--cream-2);border-top:1px solid var(--line)}
+.ig-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:38px}
+.ig-head h2{font-size:clamp(1.7rem,2.4vw,2.4rem)}
+.ig-handle{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;border-bottom:1px solid transparent;transition:border-color var(--transition)}
+.ig-handle:hover{border-bottom-color:var(--gold)}
+.ig-handle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.ig-tile{position:relative;aspect-ratio:1;overflow:hidden;background:var(--white);display:block}
+.ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition-slow)}
+.ig-tile::after{content:'';position:absolute;inset:0;background:rgba(43,43,46,.35);opacity:0;transition:opacity var(--transition)}
+.ig-tile:hover img{transform:scale(1.07)}
+.ig-tile:hover::after{opacity:1}
+.ig-tile .ig-ico{position:absolute;inset:0;margin:auto;width:24px;height:24px;z-index:2;opacity:0;transition:opacity var(--transition);
+  fill:none;stroke:#fff;stroke-width:1.5}
+.ig-tile:hover .ig-ico{opacity:1}
+@media(max-width:900px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---- Příběh majitelky + reference ---- */
+.story-section{background:var(--dark);color:#fff}
+.story-section h2{color:#fff}
+.story-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.story-portrait{position:relative}
+.story-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.25) contrast(1.02);display:block}
+.story-portrait::after{content:'';position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(184,154,90,.4);z-index:-1}
+.story-portrait .cap{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-on-dark);margin-top:18px;display:block}
+.story-body .overline{margin-bottom:1rem}
+.story-body h2{font-size:clamp(1.9rem,2.9vw,2.9rem);margin-bottom:26px}
+.story-body p{color:rgba(255,255,255,.66);font-weight:300;line-height:1.85;margin-bottom:18px;max-width:60ch}
+.story-body p b{color:#fff;font-weight:500}
+.story-pull{border-left:2px solid var(--gold);padding:6px 0 6px 22px;margin:30px 0;
+  font-family:var(--font-display);font-size:1.5rem;line-height:1.4;color:var(--gold-light);font-style:italic}
+.signature{margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1)}
+.signature .sig-img{width:230px;max-width:60%;height:auto;color:var(--gold-light);display:block;
+  transform:rotate(-1.2deg);opacity:.95}
+.signature .sig-name{display:block;margin-top:14px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-on-dark)}
+@media(max-width:900px){.story-layout{grid-template-columns:1fr;gap:44px}.story-portrait{max-width:340px}}
+
+.refs-section{background:var(--dark-mid);color:#fff;border-top:1px solid rgba(255,255,255,.07)}
+.refs-section h2{color:#fff}
+.refs-section .body-lg{color:rgba(255,255,255,.55)}
+.refs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.ref-card{border:1px solid rgba(255,255,255,.12);padding:34px;display:flex;flex-direction:column;gap:18px;
+  background:linear-gradient(160deg,rgba(255,255,255,.03),transparent)}
+.ref-card .quote{font-family:var(--font-display);font-size:1.22rem;line-height:1.55;color:#fff;flex:1}
+.ref-card .meta{font-size:.8rem;color:var(--grey-on-dark);letter-spacing:.04em}
+.ref-card .meta b{display:block;color:var(--gold-light);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.68rem;margin-bottom:5px}
+.ref-verified{display:inline-flex;align-items:center;gap:7px;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.refs-empty{border:1px dashed rgba(184,154,90,.45);padding:48px;margin-top:52px;text-align:center;
+  background:linear-gradient(160deg,rgba(184,154,90,.07),transparent)}
+.refs-empty .e-title{font-family:var(--font-display);font-size:1.9rem;color:#fff;margin-bottom:14px}
+.refs-empty p{color:rgba(255,255,255,.6);font-weight:300;max-width:62ch;margin:0 auto 22px;line-height:1.8}
+@media(max-width:900px){.refs-grid{grid-template-columns:1fr}}
+
+.comp-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.comp-pillars{display:flex;flex-direction:column;gap:26px}
+.pillar{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start}
+.pillar-ico{width:44px;height:44px;border:1px solid var(--gold-pale);display:flex;align-items:center;justify-content:center;background:var(--white);color:var(--gold);flex-shrink:0}
+.pillar-ico svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pillar h4{font-size:1.15rem;margin-bottom:4px;font-family:var(--font-body);font-weight:500;letter-spacing:0}
+.pillar p{font-size:1rem;color:var(--warm-grey);font-weight:300;line-height:1.7}
+.ing-card{background:var(--white);border:1px solid var(--line);overflow:hidden}
+.ing-head{padding:24px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.ing-head .t{font-family:var(--font-display);font-size:1.35rem}
+.ing-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.ing-tab{border:1px solid var(--line);background:var(--cream);padding:7px 13px;font-size:.74rem;cursor:pointer;font-family:inherit;letter-spacing:.06em;transition:all var(--transition);color:var(--grey-text)}
+.ing-tab.on{background:var(--dark);color:var(--gold-light);border-color:var(--dark)}
+.ing-body{padding:26px 28px}
+.ing-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:14px 0;border-bottom:1px dotted var(--line);font-size:.95rem}
+.ing-row:last-child{border-bottom:none}
+.ing-row .k{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;padding-top:3px}
+.ing-row .v{color:var(--charcoal);font-weight:300;line-height:1.65}
+.ing-foot{background:var(--cream);padding:20px 28px;font-size:.92rem;color:var(--grey-text);font-weight:300;border-top:1px solid var(--line);line-height:1.65}
+@media(max-width:900px){.comp-layout{grid-template-columns:1fr;gap:44px}}
+
+
+/* --- A) nadpisy se odhalí zpod masky --- */
+/* padding-top nechává prostor pro české háčky/čárky, aby je maska neuřízla */
+.mask-line{display:block;overflow:hidden;padding-top:.14em;margin-top:-.14em}
+.mask-line > span{display:block;transform:translateY(105%);transition:transform 1s cubic-bezier(.19,1,.22,1)}
+.mask-in .mask-line > span{transform:translateY(0)}
+.mask-line:nth-child(2) > span{transition-delay:.12s}
+@media(prefers-reduced-motion:reduce){.mask-line > span{transform:none}}
+
+/* --- B) naklopení lahve za kurzorem --- */
+.product-img-wrap{perspective:900px}
+.product-img-wrap img{transition:transform .5s cubic-bezier(.25,.46,.45,.94);will-change:transform}
+.product-card:hover .product-img-wrap img{transition:transform .12s linear}
+@media(prefers-reduced-motion:reduce){.product-img-wrap img{transition:none}}
+
+.process-section{background:var(--cream-2)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px}
+.process-step{text-align:center}
+.step-circle{width:64px;height:64px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:1.5rem;color:var(--gold);background:var(--white);transition:all var(--transition)}
+.process-step:hover .step-circle{background:var(--gold-deep);color:#fff;transform:translateY(-4px)}
+.step-title{font-size:1.15rem;margin-bottom:8px;font-family:var(--font-body);font-weight:500}
+.step-text{font-size:1rem;color:var(--warm-grey);font-weight:300;max-width:32ch;margin:0 auto}
+/* rovnice dávkování — světlá karta, sloupce místo jednoho řádku textu */
+.dose-eq{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);
+  margin-top:56px;padding:40px 28px;display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,44px);flex-wrap:wrap;
+  box-shadow:0 24px 50px -42px rgba(10,10,10,.4)}
+.de{text-align:center;min-width:96px}
+.de .v{display:block;font-family:var(--font-display);font-size:clamp(2rem,2.8vw,2.7rem);color:var(--gold-text);line-height:1.05}
+.de .l{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-text);margin-top:8px}
+.de.is-price .v{color:var(--dark)}
+.eqs{font-family:var(--font-display);font-size:1.6rem;color:var(--line);line-height:1;margin-bottom:18px}
+.dose-note{text-align:center;font-size:.95rem;color:var(--grey-text);margin-top:20px;font-weight:300}
+@media(max-width:700px){.dose-eq{gap:10px;padding:30px 16px}.de{min-width:66px}.eqs{font-size:1.2rem}}
+@media(max-width:800px){.process-steps{grid-template-columns:1fr;gap:34px}}
+
+.faq-section{background:var(--dark);color:#fff}
+.faq-section h2{color:#fff}
+.faq-list{margin-top:52px}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq-question{width:100%;background:none;border:none;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;text-align:left;font-family:var(--font-body);font-size:1.08rem;color:#fff;font-weight:400;transition:color var(--transition)}
+.faq-question:hover{color:var(--gold-light)}
+.faq-icon{font-size:1.4rem;color:var(--gold);font-weight:300;transition:transform var(--transition);flex-shrink:0;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.faq-item.open .faq-answer{max-height:480px}
+.faq-answer-inner{padding-bottom:26px;font-size:1rem;color:rgba(255,255,255,.68);line-height:1.8;font-weight:300;max-width:80ch}
+.faq-answer-inner b{color:var(--gold-light);font-weight:500}
+
+.final{background:var(--white);text-align:center}
+.newsletter{background:var(--cream-2);padding:70px 0}
+.newsletter-inner{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.newsletter-text h3{font-size:1.7rem;margin-bottom:5px}
+.newsletter-text p{font-size:1rem;color:var(--warm-grey);font-weight:300}
+.newsletter-form{display:flex;min-width:380px;flex:1;max-width:480px}
+.newsletter-input{flex:1;border:1px solid var(--line);border-right:none;background:var(--white);padding:16px 18px;font-family:inherit;font-size:.95rem;outline:none;font-weight:300}
+.newsletter-input:focus{border-color:var(--gold)}
+.newsletter-submit{background:var(--dark);color:#fff;border:none;padding:15px 26px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-family:inherit;font-weight:600;transition:background var(--transition)}
+.newsletter-submit:hover{background:var(--gold-deep)}
+@media(max-width:760px){.newsletter-form{min-width:100%}}
+
+.cart-overlay{position:fixed;inset:0;background:rgba(10,10,10,.5);opacity:0;pointer-events:none;transition:opacity var(--transition);z-index:95;backdrop-filter:blur(2px)}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-sidebar{position:fixed;top:0;right:0;width:400px;max-width:92vw;height:100%;background:var(--cream);z-index:100;transform:translateX(100%);transition:transform var(--transition);display:flex;flex-direction:column;box-shadow:-20px 0 60px -30px rgba(0,0,0,.5)}
+.cart-sidebar.open{transform:translateX(0)}
+.cart-header{padding:26px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.cart-title{font-family:var(--font-display);font-size:1.5rem}
+.cart-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--warm-grey);line-height:1}
+.cart-items{flex:1;overflow-y:auto;padding:20px 28px}
+.cart-empty{text-align:center;padding:56px 0;color:var(--grey-text)}
+.cart-empty-icon{margin-bottom:16px;color:var(--line)}
+.cart-empty-icon svg{width:44px;height:44px;stroke:currentColor;stroke-width:1.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cart-item{display:grid;grid-template-columns:62px 1fr 22px;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}
+.cart-item-img{width:62px;height:62px;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cart-item-img img{max-height:56px}
+.cart-item-name{font-size:.95rem;font-weight:500;margin-bottom:2px}
+.cart-item-price{font-size:.76rem;color:var(--warm-grey);margin-bottom:7px}
+.cart-item-qty{display:flex;align-items:center;gap:9px}
+.qty-btn{width:22px;height:22px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-size:.8rem;line-height:1;color:var(--charcoal);transition:all var(--transition)}
+.qty-btn:hover{border-color:var(--gold);color:var(--gold)}
+.qty-val{font-size:.84rem;min-width:16px;text-align:center}
+.cart-item-remove{background:none;border:none;color:var(--warm-grey);cursor:pointer;font-size:.85rem}
+.cart-footer{padding:24px 28px;border-top:1px solid var(--line);background:var(--white)}
+.cart-total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.cart-total-row .l{font-size:.82rem;color:var(--grey-text)}
+.cart-total-row .v{font-family:var(--font-display);font-size:1.8rem}
+.cart-ship{font-size:.74rem;color:var(--ok);margin-bottom:16px}
+.cart-ship.no{color:var(--grey-text)}
+.cart-checkout{width:100%;justify-content:center}
+
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(140px);background:var(--dark);color:var(--cream);padding:15px 26px;display:flex;align-items:center;gap:11px;font-size:.85rem;z-index:110;transition:transform var(--transition);box-shadow:0 18px 46px -14px rgba(0,0,0,.55)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast-icon{color:var(--gold-light)}
+
+footer{background:var(--black);color:var(--grey-on-dark);padding:74px 0 30px;font-size:.95rem;font-weight:300}
+.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;margin-bottom:52px}
+.footer-brand-logo{margin-bottom:18px}
+.footer-brand-logo img{height:32px;width:auto;display:block}
+.footer-brand-text{max-width:32ch;line-height:1.75}
+.footer-col-title{color:#fff;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px;font-weight:500;font-family:var(--font-body)}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+footer a{transition:color var(--transition)}
+footer a:hover{color:var(--gold-light)}
+/* pruh doprava/platba v patičce */
+.pay-strip{border-top:1px solid rgba(255,255,255,.09);padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.pay-group{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pay-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-on-dark);margin-right:4px}
+.pay-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.16);padding:9px 14px;
+  font-size:.78rem;color:rgba(255,255,255,.82);letter-spacing:.04em;transition:border-color var(--transition),color var(--transition)}
+.pay-pill:hover{border-color:var(--gold);color:#fff}
+.pay-pill svg{width:15px;height:15px;fill:none;stroke:var(--gold-light);stroke-width:1.5}
+@media(max-width:760px){.pay-strip{flex-direction:column;align-items:flex-start;gap:16px}}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.09);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.8rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+</style>
+<style>
+/* ============ DETAIL PRODUKTU ============ */
+.crumbs{padding:26px 0;font-size:.85rem;color:var(--grey-text)}
+.crumbs a{color:var(--grey-text);border-bottom:1px solid transparent;transition:border-color var(--transition)}
+.crumbs a:hover{border-bottom-color:var(--gold)}
+.crumbs .sep{margin:0 9px;color:var(--line)}
+.crumbs b{color:var(--dark);font-weight:500}
+
+.pd{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start;padding-bottom:80px}
+.pd-gallery{position:sticky;top:96px}
+.pd-main{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--pc,var(--gold));
+  padding:34px;display:flex;align-items:center;justify-content:center;min-height:480px;perspective:900px;position:relative}
+.pd-main img{max-height:420px;width:auto;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.pd-main .swatch{position:absolute;top:20px;left:20px;width:14px;height:14px;border-radius:50%;background:var(--pc)}
+.pd-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.pd-thumb{background:var(--white);border:1px solid var(--line);aspect-ratio:1;overflow:hidden;cursor:pointer;padding:0}
+.pd-thumb img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition)}
+.pd-thumb.on{border-color:var(--pc)}
+.pd-thumb:hover img{transform:scale(1.05)}
+
+.pd-name{font-family:var(--font-display);font-size:clamp(2.6rem,4vw,3.6rem);line-height:1.05;margin-bottom:6px}
+.pd-fam{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pc-strong,var(--gold-text));font-weight:500;margin-bottom:22px}
+.pd-lead{font-size:1.05rem;color:var(--grey-text);line-height:1.75;margin-bottom:28px;max-width:46ch}
+.pd-price{display:flex;align-items:baseline;gap:16px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pd-price .big{font-family:var(--font-display);font-size:2.8rem;line-height:1}
+.pd-price .per{font-size:.9rem;color:var(--grey-text)}
+.pd-price .per b{color:var(--gold-text);font-weight:500}
+.pd-buy{display:flex;gap:12px;margin:26px 0 18px;flex-wrap:wrap}
+.pd-qty{display:flex;align-items:center;border:1px solid var(--line);background:var(--white)}
+.pd-qty button{width:44px;height:52px;border:none;background:none;cursor:pointer;font-size:1.1rem;color:var(--grey-text);font-family:inherit}
+.pd-qty button:hover{color:var(--dark)}
+.pd-qty span{width:36px;text-align:center;font-weight:500}
+.pd-buy .btn{flex:1;justify-content:center;min-width:220px}
+.pd-alt{font-size:.95rem;color:var(--grey-text)}
+.pd-alt a{color:var(--gold-text);border-bottom:1px solid var(--gold-pale)}
+.pd-alt a:hover{border-bottom-color:var(--gold)}
+.pd-trust{list-style:none;margin-top:28px;display:grid;gap:11px}
+.pd-trust li{display:flex;gap:11px;align-items:flex-start;font-size:.95rem;color:var(--grey-text)}
+.pd-trust svg{width:17px;height:17px;flex-shrink:0;margin-top:3px;fill:none;stroke:var(--gold);stroke-width:1.6}
+
+.pyramid{margin-top:70px;border-top:1px solid var(--line);padding-top:56px}
+.pyr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.pyr-cell{background:var(--white);padding:34px 30px}
+.pyr-cell .n{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pc-strong,var(--gold-text));font-weight:500}
+.pyr-cell .w{font-family:var(--font-display);font-size:1.5rem;margin:12px 0 8px;line-height:1.3}
+.pyr-cell .d{font-size:.9rem;color:var(--grey-text);line-height:1.65}
+
+.safety{background:var(--cream-2);border-left:3px solid var(--gold);padding:32px 34px;margin-top:44px}
+.safety h4{font-family:var(--font-body);font-size:1rem;font-weight:500;margin-bottom:12px}
+.safety p{font-size:.95rem;color:var(--grey-text);line-height:1.75;max-width:78ch}
+.safety .alerg{font-size:.95rem;margin-top:14px;color:var(--dark)}
+.safety .alerg b{font-weight:500}
+
+.cross{padding:70px 0 90px;border-top:1px solid var(--line);margin-top:70px}
+.cross-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.cross-card{background:var(--white);border:1px solid var(--line);padding:0;text-align:center;display:block;transition:all var(--transition);position:relative}
+.cross-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--pc);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.cross-card:hover::before{transform:scaleX(1)}
+.cross-card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -38px var(--pc-shadow)}
+.cross-card img{width:100%;max-height:200px;object-fit:contain;padding:20px 20px 0}
+.cross-card .cn{font-family:var(--font-display);font-size:1.4rem;padding:6px 10px 2px}
+.cross-card .cf{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-text);padding-bottom:22px}
+
+@media(max-width:960px){.pd{grid-template-columns:1fr;gap:36px}.pd-gallery{position:static}
+  .pyr-grid{grid-template-columns:1fr}.cross-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<script type="application/ld+json" id="prod-ld"></script>
+</head>
+<body>
+<div class="topbar">
+  Vzorek zdarma ke každé lahvi<span class="sep">·</span><span class="opt-hide">Doprava zdarma nad <b>799 Kč</b></span>
+</div>
+
+<div id="scroll-progress" aria-hidden="true"></div>
+<nav id="nav"><div class="container nav-inner">
+  <a href="index.html" class="nav-logo" aria-label="Vivella — domů">
+    <img src="assets/logo/vivella-black-h.svg" alt="Vivella">
+  </a>
+  <ul class="nav-links">
+    <li><a href="vune.html">Vůně</a></li>
+    <li><a href="index.html#najit">Najít svou vůni</a></li>
+    <li><a href="index.html#pribeh">Náš příběh</a></li>
+    <li><a href="index.html#slozeni">Složení</a></li>
+    <li><a href="index.html#jak-to-funguje">Jak používat</a></li>
+    <li><a href="index.html#faq">Časté dotazy</a></li>
+    <li><a href="doprava-platba.html">Doprava a platba</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-cart" id="cart-toggle" aria-label="Košík">
+      <svg viewBox="0 0 24 24"><path d="M4 5h2l2.2 10.4a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.5-1.2L20.5 8H6.2"/><circle cx="10" cy="20" r="1.1"/><circle cx="18" cy="20" r="1.1"/></svg>
+      <span class="cart-badge" id="cart-count">0</span>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</div></nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&#10005;</button>
+  <img src="assets/logo/vivella-white-h.svg" alt="Vivella" class="mobile-logo">
+  <a href="vune.html" class="mobile-link">Vůně</a>
+  <a href="index.html#najit" class="mobile-link">Najít svou vůni</a>
+  <a href="index.html#pribeh" class="mobile-link">Náš příběh</a>
+  <a href="index.html#slozeni" class="mobile-link">Složení</a>
+  <a href="index.html#jak-to-funguje" class="mobile-link">Jak používat</a>
+  <a href="index.html#faq" class="mobile-link">Časté dotazy</a>
+  <a href="doprava-platba.html" class="mobile-link">Doprava a platba</a>
+</div>
+
+
+<div class="container">
+  <nav class="crumbs" aria-label="Drobečková navigace">
+    <a href="index.html">Úvod</a><span class="sep">/</span>
+    <a href="index.html#produkty">Vůně</a><span class="sep">/</span>
+    <b id="crumb-name">—</b>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="pd" id="pd">
+    <div class="pd-gallery">
+      <div class="pd-main" id="pd-main">
+        <span class="swatch" aria-hidden="true"></span>
+        <img id="pd-img" src="" alt="" width="760" height="1000">
+      </div>
+      <div class="pd-thumbs" id="pd-thumbs"></div>
+    </div>
+
+    <div class="pd-info">
+      <h1 class="pd-name" id="pd-name">—</h1>
+      <div class="pd-fam" id="pd-fam">—</div>
+      <p class="pd-lead" id="pd-lead">—</p>
+
+      <div class="pd-price">
+        <span class="big">349 Kč</span>
+        <span class="per">250 ml &middot; <b>6,98 Kč</b> za jedno praní &middot; 50 praní z lahve</span>
+      </div>
+
+      <div class="pd-buy">
+        <div class="pd-qty">
+          <button type="button" id="q-minus" aria-label="Ubrat">&minus;</button>
+          <span id="q-val">1</span>
+          <button type="button" id="q-plus" aria-label="Přidat">+</button>
+        </div>
+        <button class="btn btn-gold" id="pd-add"><span>Přidat do košíku</span></button>
+      </div>
+      <p class="pd-alt">Nejste si jistí? <a href="index.html#balicky">Vyzkoušejte nejdřív vzorkovník všech 5 vůní za 199 Kč</a> — hodnotu vám odečteme z první velké objednávky.</p>
+
+      <ul class="pd-trust">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg><span>Ke každé lahvi <b>vzorek jiné vůně zdarma</b></span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg><span>Doprava zdarma nad 799 Kč</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Kompletní seznam alergenů na webu i na etiketě</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <section class="pyramid">
+    <div class="section-header">
+      <span class="overline">Čichová pyramida</span>
+      <h2 class="display-md">Co ucítíte a kdy.</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="pyr-grid">
+      <div class="pyr-cell"><div class="n">Hlava</div><div class="w" id="py-h">—</div><div class="d">První dojem po vyndání prádla z pračky. Vyprchá nejrychleji.</div></div>
+      <div class="pyr-cell"><div class="n">Srdce</div><div class="w" id="py-s">—</div><div class="d">Jádro vůně. To, co cítíte, když si prádlo přivoníte ve skříni.</div></div>
+      <div class="pyr-cell"><div class="n">Základ</div><div class="w" id="py-z">—</div><div class="d">Drží nejdéle — i několik týdnů. Tohle po vůni zůstane.</div></div>
+    </div>
+
+    <div class="safety">
+      <h4>Složení a bezpečnost — bez příkras</h4>
+      <p>Koncentrovaný přípravek určený výhradně do přihrádky na aviváž. Nikdy ne přímo na prádlo nebo do bubnu. <b>Není vhodný na kojenecké prádlo, pro atopickou pokožku ani pro přímý kontakt s kůží.</b> Dráždí kůži a oči, může vyvolat alergickou kožní reakci. Uchovávejte mimo dosah dětí.</p>
+      <p class="alerg"><b>Vonné alergeny:</b> <span id="py-alerg">—</span></p>
+    </div>
+  </section>
+
+  <section class="cross">
+    <div class="section-header">
+      <span class="overline">Další vůně</span>
+      <h2 class="display-md">Vůni si můžete střídat.</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="cross-grid" id="cross"></div>
+  </section>
+</div>
+<footer><div class="container">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo"><img src="assets/logo/vivella-white-h.svg" alt="Vivella"></div>
+      <p class="footer-brand-text">Olejové parfémy na praní. Poctivé složení, poctivá matematika, žádné vymyšlené hvězdičky.</p>
+    </div>
+    <div><div class="footer-col-title">Vůně</div><ul>
+      <li><a href="#produkty">Violet Dream</a></li><li><a href="#produkty">Coco</a></li><li><a href="#produkty">Queen</a></li>
+      <li><a href="#produkty">Pure Essence</a></li><li><a href="#produkty">Satin Bloom</a></li><li><a href="#balicky">Vzorkovník</a></li>
+    </ul></div>
+    <div><div class="footer-col-title">Poradna</div><ul>
+      <li><a href="#faq">Ničí parfém pračku?</a></li><li><a href="#faq">Parfém vs. aviváž</a></li>
+      <li><a href="#slozeni">Složení a alergeny</a></li><li><a href="#jak-to-funguje">Jak dávkovat</a></li>
+      <li><a href="#pribeh">Kdo za Vivellou stojí</a></li>
+    </ul></div>
+    <div><div class="footer-col-title">Kontakt</div><ul>
+      <li>Vivella Essentials s.r.o.</li><li>Pod lesíkem 335/2</li><li>111 01 Praha 10</li>
+      <li><a href="tel:+420607135388">+420 607 135 388</a></li>
+      <li><a href="doprava-platba.html">Doprava a platba</a></li>
+    </ul></div>
+  </div>
+  <div class="pay-strip">
+    <div class="pay-group">
+      <span class="pay-label">Doprava</span>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><path d="M3 8h18v11H3z"/><path d="M3 8l2-4h14l2 4"/></svg>Zásilkovna</a>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>Česká pošta</a>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg>Zdarma nad 799 Kč</a>
+    </div>
+    <div class="pay-group">
+      <span class="pay-label">Platba</span>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13"/><path d="M2.5 10h19"/></svg>Karta online</a>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M19 9v9M12 9v9"/><path d="M3 19h18"/></svg>Převod</a>
+      <a class="pay-pill" href="doprava-platba.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.5 10h5M9.5 14h5"/></svg>Dobírka</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Vivella Essentials s.r.o.</span>
+    <span>Obchodní podmínky &middot; Ochrana osobních údajů &middot; Reklamace</span>
+  </div>
+</div></footer>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <span class="cart-title">Košík</span>
+    <button class="cart-close" id="cart-close">&#10005;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total-row"><span class="l">Celkem</span><span class="v" id="cart-total">0 Kč</span></div>
+    <div class="cart-ship" id="cart-ship"></div>
+    <button class="btn btn-gold cart-checkout"><span>Pokračovat k pokladně</span></button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"><span class="toast-icon">&#10003;</span><span id="toast-msg"></span></div>
+
+
+<script>
+const P=[
+ {id:'violet-dream',n:'Violet Dream',fam:'Květinová · snová',c:'#7B4FA8',badge:'',
+  h:'aldehydy, svěží jarní zelené lístky',s:'jasmín, šeřík, fialky',z:'tonka, santalové dřevo, pačuli',
+  alerg:'reakční směs izopentylsalicylátu, tetrahydrolinalool, hexyl-salicylát',
+  q:{fam:'kvet',mood:'jemna',use:'lozni'}},
+ {id:'coco',n:'Coco',fam:'Svěží · smyslná',c:'#D4899A',badge:'',
+  h:'citrus, bergamot',s:'jasmín, růže',z:'dřevo, pačuli, santal, mošusy',
+  alerg:'kokosový akord, santalové dřevo, vanilkové tóny — kompletní seznam na etiketě',
+  q:{fam:'sladka',mood:'smyslna',use:'ven'}},
+ {id:'queen',n:'Queen',fam:'Orientální · luxusní',c:'#2B2B2E',badge:'Nejvýraznější',
+  h:'citrusy, aldehydická nota',s:'růže, geránie, jasmín, skořice',z:'vanilka, ambra, mošus, pudrová nota',
+  alerg:'amyl cinnamaldehyd, citronellol, tetrahydrolinalool, reakční směs izopentylsalicylátu a 2-methylbutyl-salicylátu, cinnamyl alkohol',
+  q:{fam:'sladka',mood:'smyslna',use:'ven'}},
+ {id:'pure-essence',n:'Pure Essence',fam:'Svěží · čistá',c:'#3E9BCB',badge:'Nejjemnější',
+  h:'aldehydy, mandarinka, vodní tóny',s:'pomerančové květy, jasmín, eukalypt, levandule',z:'pačuli, santalové dřevo, mošusy',
+  alerg:'2-phenoxyethanol, ethyllinalool, floralozone, linalool',
+  q:{fam:'svezi',mood:'cista',use:'lozni'}},
+ {id:'satin-bloom',n:'Satin Bloom',fam:'Ovocně-květinová · pudrová',c:'#2E3D80',badge:'',
+  h:'citron, červené plody, eukalyptus, aldehydická nota',s:'jablko, růže, konvalinka, jasmín, fialka',z:'santalové dřevo, mošus, cedr, tonka',
+  alerg:'okta-hydro-tetramethyl-naftyl-ethanon, tetrahydrolinalool, α-hexylcinnamaldehyd, linalool',
+  q:{fam:'svezi',mood:'jemna',use:'lozni'}}
+];
+
+function pcVars(el,hex){
+  var r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  el.style.setProperty('--pc',hex);
+  el.style.setProperty('--pc-soft','rgba('+r+','+g+','+b+',.10)');
+  el.style.setProperty('--pc-line','rgba('+r+','+g+','+b+',.45)');
+  el.style.setProperty('--pc-shadow','rgba('+r+','+g+','+b+',.42)');
+  var f=.62;
+  el.style.setProperty('--pc-strong','rgb('+Math.round(r*f)+','+Math.round(g*f)+','+Math.round(b*f)+')');
+}
+
+/* --- který produkt zobrazit: ?v=coco (výchozí Violet Dream) --- */
+var slug=(new URLSearchParams(location.search)).get('v')||'violet-dream';
+var prod=P.filter(function(p){return p.id===slug;})[0]||P[0];
+
+var LEADS={
+ 'violet-dream':'Snová květinová vůně, která začíná svěže a končí v teplém dřevě. Nejtišší z kolekce — cítíte ji vy a lidé, kteří jsou vám blízko.',
+ 'coco':'Svěží start, smyslné jádro. Vůně, která jde s vámi mezi lidi a zůstane na oblečení i po celém dni.',
+ 'queen':'Nejvýraznější vůně kolekce. Orientální, pudrová, s dlouhým doznívání. Není pro každý den — je pro dny, které mají být vidět.',
+ 'pure-essence':'Nejjemnější z kolekce. Čistota, voda a bílé květy. Pro povlečení a ručníky, se kterými se dobře usíná.',
+ 'satin-bloom':'Ovocně-květinová a pudrová. Nejuniverzálnější vůně kolekce — sedne na povlečení i na oblečení.'
+};
+
+document.title = 'Vivella '+prod.n+' — parfém na praní, 250 ml';
+document.getElementById('canon').href='https://vivella.cz/vune/'+prod.id;   // každá vůně má vlastní kanonickou URL
+document.getElementById('crumb-name').textContent=prod.n;
+document.getElementById('pd-name').textContent=prod.n;
+document.getElementById('pd-fam').textContent=prod.fam;
+document.getElementById('pd-lead').textContent=LEADS[prod.id]||'';
+document.getElementById('py-h').textContent=prod.h;
+document.getElementById('py-s').textContent=prod.s;
+document.getElementById('py-z').textContent=prod.z;
+document.getElementById('py-alerg').textContent=prod.alerg;
+pcVars(document.getElementById('pd'),prod.c);
+pcVars(document.querySelector('.pd-main'),prod.c);
+pcVars(document.querySelector('.pyramid'),prod.c);
+
+
+/* strukturovaná data produktu — cena, dostupnost a drobečky pro vyhledávače */
+(function(){
+  document.getElementById('prod-ld').textContent=JSON.stringify({"@context":"https://schema.org","@graph":[
+    {"@type":"Product","name":"Vivella "+prod.n,
+     "image":["https://vivella.cz/assets/"+prod.id+".webp"],
+     "description":(LEADS[prod.id]||''),
+     "sku":prod.id,"brand":{"@type":"Brand","name":"Vivella"},
+     "category":"Parfém na praní",
+     "offers":{"@type":"Offer","url":"https://vivella.cz/vune/"+prod.id,
+       "priceCurrency":"CZK","price":"349","availability":"https://schema.org/InStock",
+       "itemCondition":"https://schema.org/NewCondition",
+       "shippingDetails":{"@type":"OfferShippingDetails",
+         "shippingRate":{"@type":"MonetaryAmount","value":"79","currency":"CZK"},
+         "shippingDestination":{"@type":"DefinedRegion","addressCountry":"CZ"}},
+       "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy",
+         "applicableCountry":"CZ","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
+         "merchantReturnDays":14,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/ReturnShippingFees"}}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Úvod","item":"https://vivella.cz/"},
+      {"@type":"ListItem","position":2,"name":"Vůně","item":"https://vivella.cz/vune"},
+      {"@type":"ListItem","position":3,"name":prod.n}]}
+  ]});
+})();
+
+/* galerie: produkt + dva lifestyle záběry */
+var SHOTS=['assets/'+prod.id+'.webp','assets/lifestyle-2.webp','assets/lifestyle-3.webp'];
+var img=document.getElementById('pd-img');
+img.src=SHOTS[0]; img.alt='Vivella '+prod.n+' — parfém na praní 250 ml';
+document.getElementById('pd-thumbs').innerHTML=SHOTS.map(function(src,i){
+  return '<button class="pd-thumb '+(i===0?'on':'')+'" data-i="'+i+'"><img src="'+src+'" alt=""></button>';
+}).join('');
+document.querySelectorAll('.pd-thumb').forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll('.pd-thumb').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on'); img.src=SHOTS[+b.dataset.i];
+  };
+});
+
+/* naklopení lahve za kurzorem */
+(function(){
+  var wrap=document.getElementById('pd-main');
+  if(window.matchMedia('(hover:none)').matches||window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  wrap.addEventListener('mousemove',function(e){
+    var r=wrap.getBoundingClientRect();
+    var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+    img.style.transition='transform .12s linear';
+    img.style.transform='rotateY('+(px*7).toFixed(2)+'deg) rotateX('+(-py*5).toFixed(2)+'deg) scale(1.03)';
+  });
+  wrap.addEventListener('mouseleave',function(){ img.style.transition='transform .5s cubic-bezier(.25,.46,.45,.94)'; img.style.transform=''; });
+})();
+
+/* další vůně */
+document.getElementById('cross').innerHTML=P.filter(function(p){return p.id!==prod.id;}).map(function(p){
+  return '<a class="cross-card" href="detail.html?v='+p.id+'" style="--pc:'+p.c+'">'+
+    '<img src="assets/'+p.id+'.webp" alt="Vivella '+p.n+'" width="760" height="1000" loading="lazy">'+
+    '<div class="cn">'+p.n+'</div><div class="cf">'+p.fam+'</div></a>';
+}).join('');
+document.querySelectorAll('.cross-card').forEach(function(el){ pcVars(el, el.style.getPropertyValue('--pc').trim()); });
+
+/* množství */
+var qty=1;
+document.getElementById('q-minus').onclick=function(){ if(qty>1){qty--;document.getElementById('q-val').textContent=qty;} };
+document.getElementById('q-plus').onclick=function(){ qty++;document.getElementById('q-val').textContent=qty; };
+
+/* --- košík (stejný jako na homepage) --- */
+var cart=[], FREE_SHIP=799;
+function addToCart(name,price,img,n,col){
+  var ex=null; cart.forEach(function(i){ if(i.name===name) ex=i; });
+  if(ex){ ex.qty+=(n||1); } else { cart.push({name:name,price:+price,img:img,qty:(n||1),c:col||''}); }
+  updateCart(); showToast(name+' přidáno do košíku');
+}
+function removeFromCart(i){ cart.splice(i,1); updateCart(); }
+function changeQty(i,d){ cart[i].qty+=d; if(cart[i].qty<=0){removeFromCart(i);}else{updateCart();} }
+function updateCart(){
+  var count=0; cart.forEach(function(i){count+=i.qty;});
+  document.getElementById('cart-count').textContent=count;
+  var items=document.getElementById('cart-items'), foot=document.getElementById('cart-footer');
+  if(!cart.length){
+    items.innerHTML='<div class="cart-empty"><p>Váš košík je prázdný</p></div>';
+    foot.style.display='none'; return;
+  }
+  items.innerHTML=cart.map(function(it,i){return ''+
+    '<div class="cart-item"'+(it.c?' style="--pc:'+it.c+'"':'')+'>'+
+      '<div class="cart-item-img"><img src="'+it.img+'" alt=""></div>'+
+      '<div><div class="cart-item-name">'+it.name+'</div>'+
+      '<div class="cart-item-price">'+it.price.toLocaleString('cs-CZ')+' Kč / ks</div>'+
+      '<div class="cart-item-qty"><button class="qty-btn" onclick="changeQty('+i+',-1)">&minus;</button>'+
+      '<span class="qty-val">'+it.qty+'</span>'+
+      '<button class="qty-btn" onclick="changeQty('+i+',1)">+</button></div></div>'+
+      '<button class="cart-item-remove" onclick="removeFromCart('+i+')">&#10005;</button>'+
+    '</div>';}).join('');
+  var total=0; cart.forEach(function(i){total+=i.price*i.qty;});
+  document.getElementById('cart-total').textContent=total.toLocaleString('cs-CZ')+' Kč';
+  var ship=document.getElementById('cart-ship');
+  if(total>=FREE_SHIP){ ship.textContent='✓ Máte dopravu zdarma'; ship.className='cart-ship'; }
+  else { ship.textContent='Do dopravy zdarma zbývá '+(FREE_SHIP-total).toLocaleString('cs-CZ')+' Kč'; ship.className='cart-ship no'; }
+  foot.style.display='block';
+}
+document.getElementById('pd-add').onclick=function(){
+  addToCart(prod.n, 349, 'assets/'+prod.id+'.webp', qty, prod.c);
+  openCart();
+};
+var toastT;
+function showToast(msg){
+  var t=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  t.classList.add('show'); clearTimeout(toastT);
+  toastT=setTimeout(function(){ t.classList.remove('show'); },2600);
+}
+function openCart(){ document.getElementById('cart-sidebar').classList.add('open'); document.getElementById('cart-overlay').classList.add('show'); }
+function closeCart(){ document.getElementById('cart-sidebar').classList.remove('open'); document.getElementById('cart-overlay').classList.remove('show'); }
+document.getElementById('cart-toggle').onclick=openCart;
+document.getElementById('cart-close').onclick=closeCart;
+document.getElementById('cart-overlay').onclick=closeCart;
+updateCart();
+
+/* navigace + scroll progress */
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY>10);
+  var bar=document.getElementById('scroll-progress');
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+},{passive:true});
+
+/* maskované nadpisy */
+(function(){
+  var hs=document.querySelectorAll('h2.display-md');
+  hs.forEach(function(h){
+    var parts=h.innerHTML.split(/<br\s*\/?>/i);
+    h.innerHTML=parts.map(function(x){return '<span class="mask-line"><span>'+x.trim()+'</span></span>';}).join('');
+  });
+  var mo=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('mask-in'); mo.unobserve(e.target); } });
+  },{threshold:.35});
+  hs.forEach(function(h){ mo.observe(h); });
+})();
+
+/* odhalování sekcí při scrollu (.reveal) */
+(function(){
+  var els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  if(!els.length) return;
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+/* mobilní menu */
+(function(){
+  var h=document.getElementById('hamburger'), m=document.getElementById('mobile-menu'), c=document.getElementById('mobile-close');
+  if(!h||!m) return;
+  h.onclick=function(){ m.classList.add('open'); };
+  if(c) c.onclick=function(){ m.classList.remove('open'); };
+  m.querySelectorAll('.mobile-link').forEach(function(a){ a.onclick=function(){ m.classList.remove('open'); }; });
+})();
+</script>
+</body>
+</html>

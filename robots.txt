@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Košík a checkout nemají co dělat ve vyhledávání
+Disallow: /kosik
+Disallow: /pokladna
+Disallow: /*?v=          # parametrické URL detailu — kanonická je /vune/<vune>
+
+Sitemap: https://vivella.cz/sitemap.xml
